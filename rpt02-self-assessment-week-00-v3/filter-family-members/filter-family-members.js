@@ -54,8 +54,13 @@ var filterFamilyMembers = function (familyTree, truthTest) {
   // All your code in this function body
   var results = [];
   var searchTree = function(member){
+    var firstName = member.firstName;
+    var lastName = member.lastName;
+    var fullName = firstName + ' ' + lastName;
+
     if(truthTest){
-      results.push(member)
+      results.push(fullName)
+
     }
 
     for(var i = 0; i<member.length; i++){
